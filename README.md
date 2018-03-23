@@ -1,13 +1,18 @@
-# Postman Collections
+# Postman collections & environments
 List of all the files in this directory.
 ```
-- ibank Pay Sandbox Api
-  - [postman collection](iBankPay Api Sandbox Scenarios.postman_collection.json) 
-  - [postman environment](iBankPayApiSandbox Scenarios.postman_environment.json) 
-- Open Bank Sandbox Api 
-  - [postman collection](iOpen Api Sandbox Scenarios.postman_collection.json) 
-  - [postman environment](iOpenApiSandbox Scenarios.postman_environment.json)
-- Bill Payments for Third Parties Sandbox Api 
-  - [postman collection](BillPaymentsforThirdParties.postman_collection.json) 
-  - [postman environment](BillPaymentsforThirdParties.postman_environment.json)  
+
+See bellow the complete list of the Postman collection & environment JSON files available for the NBG APIs.
+
+
+- Bill Payments API 
+- Bill Payments Network API 
+- Crowdfunding API
+- Hackathon Postman files
+- ibank Pay API
+- Loyalty API
+- OCR API
+- Open Bank API 
+- Social Network API
+  
 ```
