@@ -1,0 +1,1742 @@
+{
+	"info": {
+		"_postman_id": "a1d65b1f-791e-2f5c-de39-1322a66eeb52",
+		"name": "Crowdfunding API",
+		"description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sandbox Service",
+			"description": "",
+			"item": [
+				{
+					"name": "Create Sandbox",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"sandboxId\": \"TestSandbox\"\r\n}"
+						},
+						"url": {
+							"raw": "{{root_url}}/sandbox",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"sandbox"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Export Sandbox",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{root_url}}/sandbox/{{sandbox_id}}",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"sandbox",
+								"{{sandbox_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Import Sandbox",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"SandboxID\": \"TestSandbox\",\n        \"Users\": [\n            {\n                \"name\": \"Λάμπης\",\n                \"surname\": \"Λαμπερός\",\n                \"phone\": \"2101234567\",\n                \"job\": \"Ιδ. Υπάλληλος\",\n                \"activity\": \"\",\n                \"afm\": \"075323700\",\n                \"doy\": \"ΠΑΛΛΗΝΗΣ\",\n                \"address\": \"Μαραθώνος 120\",\n                \"area\": \"ΠΑΛΛΗΝΗ\",\n                \"postal\": \"12345\",\n                \"state\": \"ΑΤΤΙΚΗΣ\",\n                \"phone_nomikou\": \"\",\n                \"email_nomikou\": \"\",\n                \"url\": \"\",\n                \"country\": \"ΕΛΛΑΔΑ\",\n                \"legal_status\": \"personal\",\n                \"userId\": \"sandboxUser1\",\n                \"userName\": \"user1\",\n                \"email\": \"user1@test.gr\",\n                \"providerId\": \"NBG.gr\",\n                \"provider\": \"NBG\"\n            },\n            {\n                \"name\": \"ΟΜΙΛΟΣ ΤΥΧΑΙΟΣ\",\n                \"surname\": \"ΟΜΙΛΟΣ ΤΥΧΑΙΟΣ\",\n                \"phone\": \"2107654321\",\n                \"job\": \"\",\n                \"activity\": \"Εταιρεία εισαγωγών εξαγωγών\",\n                \"afm\": \"075323788\",\n                \"doy\": \"ΠΑΛΛΗΝΗΣ\",\n                \"address\": \"Τυχαίου 10-12\",\n                \"area\": \"ΠΑΛΛΗΝΗ\",\n                \"postal\": \"12345\",\n                \"state\": \"ΑΤΤΙΚΗΣ\",\n                \"phone_nomikou\": \"2108508934\",\n                \"email_nomikou\": \"info@info.info\",\n                \"url\": \"www.tixaios.info\",\n                \"country\": \"ΕΛΛΑΔΑ\",\n                \"legal_status\": \"business\",\n                \"userId\": \"sandboxUser2\",\n                \"userName\": \"user2\",\n                \"email\": \"user2@test.gr\",\n                \"providerId\": \"NBG.gr\",\n                \"provider\": \"NBG\"\n            },\n            {\n                \"name\": \"Τέλης\",\n                \"surname\": \"Παστέλης\",\n                \"phone\": \"2101234567\",\n                \"job\": \"Επιχειρηματιίας\",\n                \"activity\": \"\",\n                \"afm\": \"075345600\",\n                \"doy\": \"ΠΑΛΛΗΝΗΣ\",\n                \"address\": \"Μαραθώνος 123\",\n                \"area\": \"ΠΑΛΛΗΝΗ\",\n                \"postal\": \"12345\",\n                \"state\": \"ΑΤΤΙΚΗΣ\",\n                \"phone_nomikou\": \"\",\n                \"email_nomikou\": \"\",\n                \"url\": \"\",\n                \"country\": \"ΕΛΛΑΔΑ\",\n                \"legal_status\": \"personal\",\n                \"userId\": \"migrationUser\",\n                \"userName\": \"MigrationUser\",\n                \"email\": \"MigrationUser@test.gr\",\n                \"providerId\": \"NBG.gr\",\n                \"provider\": \"NBG\"\n            }\n        ],\n        \"Accounts\": [\n            {\n                \"accountId\": \"e2554977-c1d1-47c0-8c9b-f493a2a88263\",\n                \"accountNumber\": \"12345678952\",\n                \"iban\": \"GR4201101230000012345678952\",\n                \"balance\": 14800,\n                \"currencyISO\": \"EUR\",\n                \"transactions\": [\n                    {\n                        \"amount\": -200,\n                        \"ledgerBalance\": 14800,\n                        \"timeStamp\": \"2018-02-15T14:20:01.460589Z\",\n                        \"reasonCode\": 0,\n                        \"reasonDescription\": \"ΠΛΗΡΩΜΗ\",\n                        \"origin\": null,\n                        \"valeur\": \"2018-02-15T14:20:01.460589Z\",\n                        \"currencyISO\": \"EUR\",\n                        \"reference\": \"ΠΡΟΣ ΛΟΓ. GR6001109420000094200122540\",\n                        \"branch\": null\n                    }\n                ]\n            },\n            {\n                \"accountId\": \"20a26975-7a02-4044-bb06-6c48abc56302\",\n                \"accountNumber\": \"12345678901\",\n                \"iban\": \"GR6101101230000012345678901\",\n                \"balance\": 1230,\n                \"currencyISO\": \"EUR\",\n                \"transactions\": []\n            },\n            {\n                \"accountId\": \"eac7a13f-7f33-4402-994a-11f6087dfd6a\",\n                \"accountNumber\": \"88845678993\",\n                \"iban\": \"GR8401108880000088845678993\",\n                \"balance\": 1050.4,\n                \"currencyISO\": \"EUR\",\n                \"transactions\": []\n            }\n        ],\n        \"ActionSensitiveData\": [\n            {\n                \"actionSensitiveDataId\": \"action1\",\n                \"actionName\": \"Action 1\",\n                \"accountKey\": \"123456789\",\n                \"cardsAccountKey\": \"98764321\",\n                \"dateStart\": \"2018-02-14T15:31:54.4664117Z\",\n                \"dateEnd\": \"2019-02-14T15:31:54.4664117Z\",\n                \"offsetAmount\": 200,\n                \"targetAmount\": 20000,\n                \"newsletterUsers\": [\n                    {\n                        \"userId\": \"sandboxUser1\"\n                    },\n                    {\n                        \"userId\": \"sandboxUser2\"\n                    }\n                ],\n                \"donationPromises\": [\n                    {\n                        \"donationPromiseId\": \"8da22f23-f784-428b-b05c-6f94dbe8122d\",\n                        \"actionKey\": \"action1\",\n                        \"categoryMoneyFound\": \"test\",\n                        \"donationTime\": \"2018-02-14T15:31:54.4674144Z\",\n                        \"payType\": \"sandbox\",\n                        \"publish\": true,\n                        \"theChallenge\": \"123456\",\n                        \"transactionKey\": \"bba11fe7-e460-4e74-b3da-c05655822609_2017-12-07T14:19:34\",\n                        \"transactionReceiptKey\": \"bba11fe7-e460-4e74-b3da-c05655822609_2017\",\n                        \"userKey\": \"sandboxuser1\",\n                        \"xpAmount\": 100\n                    },\n                    {\n                        \"donationPromiseId\": \"1732ca94-d67d-4c1e-aa98-3c3729ffd3f3\",\n                        \"actionKey\": \"action1\",\n                        \"categoryMoneyFound\": \"string\",\n                        \"donationTime\": \"2018-02-14T16:40:13.161Z\",\n                        \"payType\": \"string\",\n                        \"publish\": true,\n                        \"theChallenge\": \"string\",\n                        \"transactionKey\": \"string\",\n                        \"transactionReceiptKey\": \"string\",\n                        \"userKey\": \"string\",\n                        \"xpAmount\": 0\n                    }\n                ]\n            }\n        ]\n    }"
+						},
+						"url": {
+							"raw": "{{root_url}}/sandbox/{{sandbox_id}}",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"sandbox",
+								"{{sandbox_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Sandbox",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{root_url}}/sandbox/{{sandbox_id}}",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"sandbox",
+								"{{sandbox_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Sandbox User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "sandbox_id",
+								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "username",
+								"value": "{{username1}}"
+							},
+							{
+								"key": "provider_id",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"value": "{{provider}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserId\": \"sandboxUser4\",\r\n    \"UserName\": \"user4\",\r\n    \"Email\": \"user3@nbg.gr\",\r\n    \"ProviderId\": \"NBG.gr\",\r\n    \"Provider\": \"NBG\",\r\n    \"name\": \"Φώτης\",\r\n    \"surname\": \"Φωτεινός\",\r\n    \"phone\": \"2114567898\",\r\n    \"job\": \"Υπάλληλος\",\r\n    \"activity\": \"\",\r\n    \"afm\": \"5345435434\",\r\n    \"doy\": \"ΑΘΗΝΩΝ\",\r\n    \"address\": \"Ακαδημίας 22\",\r\n    \"area\": \"ΑΘΗΝΑ\",\r\n    \"postal\": \"43345\",\r\n    \"state\": \"Αττικής\",\r\n    \"phone_nomikou\": \"\",\r\n    \"email_nomikou\": \"\",\r\n    \"url\": \"\",\r\n    \"country\": \"Ελλάδα\",\r\n    \"legal_status\": \"personal\"\r\n}"
+						},
+						"url": {
+							"raw": "{{root_url}}/sandbox/{{sandbox_id}}/users",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"sandbox",
+								"{{sandbox_id}}",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create account",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "sandbox_id",
+								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "username",
+								"value": "{{username1}}"
+							},
+							{
+								"key": "provider_id",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"value": "{{provider}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"accountNumber\": \"88845678993\",\r\n  \"balance\": 1050.40\r\n}"
+						},
+						"url": {
+							"raw": "{{root_url}}/sandbox/{{sandbox_id}}/account",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"sandbox",
+								"{{sandbox_id}}",
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete account",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "sandbox_id",
+								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "username",
+								"value": "{{username1}}"
+							},
+							{
+								"key": "provider_id",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"value": "{{provider}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{root_url}}/sandbox/{{sandbox_id}}/account/{{accountID}}",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"sandbox",
+								"{{sandbox_id}}",
+								"account",
+								"{{accountID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create transfer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "sandbox_id",
+								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "username",
+								"value": "{{username1}}"
+							},
+							{
+								"key": "provider_id",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"value": "{{provider}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"amount\": 200,\r\n  \"fromAccountIBAN\": \"GR4201101230000012345678952\",\r\n  \"toAccountIBAN\": \"GR6001109420000094200122540\",\r\n  \"description\": \"ΠΛΗΡΩΜΗ\"\r\n}"
+						},
+						"url": {
+							"raw": "{{root_url}}/sandbox/{{sandbox_id}}/account/transfer",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"sandbox",
+								"{{sandbox_id}}",
+								"account",
+								"transfer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Account Service",
+			"description": "",
+			"item": [
+				{
+					"name": "Get accounts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "sandbox_id",
+								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "username",
+								"value": "{{username1}}"
+							},
+							{
+								"key": "provider_id",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"value": "{{provider}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{root_url}}/accounts",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get account",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "sandbox_id",
+								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "username",
+								"value": "{{username1}}"
+							},
+							{
+								"key": "provider_id",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"value": "{{provider}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{root_url}}/accounts/{{accountID}}",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"accounts",
+								"{{accountID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get transactions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "sandbox_id",
+								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "username",
+								"value": "{{username1}}"
+							},
+							{
+								"key": "provider_id",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"value": "{{provider}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{root_url}}/accounts/{{accountID}}/transactions",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"accounts",
+								"{{accountID}}",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CMS Content",
+			"description": "",
+			"item": [
+				{
+					"name": "Post Content",
+					"description": "",
+					"item": [
+						{
+							"name": "Post drupal content (article)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "application_id",
+										"value": "{{application_id}}"
+									},
+									{
+										"key": "user_id",
+										"value": "{{user_id}}"
+									},
+									{
+										"key": "username",
+										"value": "{{username1}}"
+									},
+									{
+										"key": "provider_id",
+										"value": "{{provider_id}}"
+									},
+									{
+										"key": "provider",
+										"value": "{{provider}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"article\": {\r\n    \"body\": [\r\n      {\r\n        \"value\": \"English body .\\r\\n\",\r\n        \"format\": \"basic_html\",\r\n        \"summary\": \"\",\r\n        \"lang\": \"en\"\r\n      },\r\n      {\r\n        \"value\": \"Greek body.\\r\\n\",\r\n        \"format\": \"basic_html\",\r\n        \"summary\": \"\",\r\n        \"lang\": \"el\"\r\n      }\r\n    ],\r\n    \"field_tags\": null,\r\n    \"field_metadata\": null,\r\n    \"field_external_sensitivedata\": null\r\n  },\r\n  \"supporter\": null,\r\n  \"action_additional_data\": null,\r\n  \"type\": [\r\n    {\r\n      \"target_id\": \"article\"\r\n    }\r\n  ],\r\n  \"title\": [\r\n    {\r\n      \"value\": \"Test Title\",\r\n      \"lang\": \"en\"\r\n    },\r\n    {\r\n        \"value\": \"Δοκιμή\",\r\n        \"lang\": \"el\"\r\n      }\r\n  ]\r\n}"
+								},
+								"url": {
+									"raw": "{{root_url}}/cmscontent/content",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"cmscontent",
+										"content"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post drupal content (supporter)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "application_id",
+										"value": "{{application_id}}"
+									},
+									{
+										"key": "user_id",
+										"value": "{{user_id}}"
+									},
+									{
+										"key": "username",
+										"value": "{{username1}}"
+									},
+									{
+										"key": "provider_id",
+										"value": "{{provider_id}}"
+									},
+									{
+										"key": "provider",
+										"value": "{{provider}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"article\": null,\r\n    \"supporter\": {\r\n        \"body\": [\r\n            {\r\n                \"value\": \"This guide includes information regarding all forms of transport into the stadium,for supporters looking to arrive at the Amex by train, bus, car or on foot.\\r\\n\",\r\n                \"format\": \"basic_html\",\r\n                \"summary\": \"\",\r\n                \"lang\": \"en\"\r\n            },\r\n            {\r\n                \"value\": \"This guide includes information regarding all forms of transport into the stadium,for supporters looking to arrive at the Amex by train, bus, car or on foot.\\r\\n\",\r\n                \"format\": \"basic_html\",\r\n                \"summary\": \"\",\r\n                \"lang\": \"el\"\r\n            }\r\n        ],\r\n        \"field_image_url\": [\r\n            {\r\n                \"value\": \"http://www.latsis-foundation.org//img/iePngs/logoEll.png\",\r\n                \"lang\": \"en\"\r\n            },\r\n            {\r\n                \"value\": \"http://www.latsis-foundation.org//img/iePngs/logoEll.png\",\r\n                \"lang\": \"el\"\r\n            }\r\n        ],\r\n        \"field_supporter_url\": [\r\n            {\r\n                \"value\": \"http://www.latsis-foundation.org/\",\r\n                \"lang\": \"en\"\r\n            },\r\n            {\r\n                \"value\": \"http://www.latsis-foundation.org/\",\r\n                \"lang\": \"el\"\r\n            }\r\n        ],\r\n        \"field_video_url\": [\r\n            {\r\n                \"value\": \"https://www.youtube.com/watch?v=B2N4aVKXfIo\",\r\n                \"lang\": \"en\"\r\n            },\r\n            {\r\n                \"value\": \"https://www.youtube.com/watch?v=B2N4aVKXfIo\",\r\n                \"lang\": \"el\"\r\n            }\r\n        ]\r\n    },\r\n    \"action_additional_data\": null,\r\n    \"type\": [\r\n        {\r\n            \"target_id\": \"supporter\"\r\n        }\r\n    ],\r\n    \"_links\": {\r\n        \"type\": {\r\n            \"href\": \"string\"\r\n        }\r\n    },\r\n    \"title\": [\r\n        {\r\n            \"value\": \"Test Title\",\r\n            \"lang\": \"en\"\r\n        },\r\n        {\r\n            \"value\": \"Δοκιμή\",\r\n            \"lang\": \"el\"\r\n        }\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "{{root_url}}/cmscontent/content",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"cmscontent",
+										"content"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post drupal content (action additional data)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "application_id",
+										"value": "{{application_id}}"
+									},
+									{
+										"key": "user_id",
+										"value": "{{user_id}}"
+									},
+									{
+										"key": "username",
+										"value": "{{username1}}"
+									},
+									{
+										"key": "provider_id",
+										"value": "{{provider_id}}"
+									},
+									{
+										"key": "provider",
+										"value": "{{provider}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"article\": null,\r\n    \"supporter\": null,\r\n    \"action_additional_data\": {\r\n        \"field_action_video\": [\r\n            {\r\n                \"value\": \"https://www.youtube.com/embed/ArTryCLsttk\",\r\n                \"lang\": \"en\"\r\n            },\r\n            {\r\n                \"value\": \"https://www.youtube.com/embed/ArTryCLsttk\",\r\n                \"lang\": \"el\"\r\n            }\r\n        ],\r\n        \"field_base_color\": [\r\n            {\r\n                \"value\": \"#676eff\",\r\n                \"lang\": \"en\"\r\n            },\r\n            {\r\n                \"value\": \"#676eff\",\r\n                \"lang\": \"el\"\r\n            }\r\n        ],\r\n        \"field_big_image_url\": [\r\n            {\r\n                \"value\": \"http://10.32.106.78:8085/core/themes/bartik/logo.svg\",\r\n                \"lang\": \"en\"\r\n            },\r\n            {\r\n                \"value\": \"http://10.32.106.78:8085/core/themes/bartik/logo.svg\",\r\n                \"lang\": \"el\"\r\n            }\r\n        ],\r\n        \"field_images_extra_images_url\": [\r\n            {\r\n                \"value\": \"http://10.32.106.78:8085/core/themes/bartik/logo.svg\",\r\n                \"lang\": \"en\"\r\n            },\r\n            {\r\n                \"value\": \"http://10.32.106.78:8085/core/themes/bartik/logo.svg\",\r\n                \"lang\": \"el\"\r\n            }\r\n        ],\r\n        \"field_page_template\": [\r\n            {\r\n                \"value\": \"basic\",\r\n                \"lang\": \"en\"\r\n            },\r\n            {\r\n                \"value\": \"basic\",\r\n                \"lang\": \"el\"\r\n            }\r\n        ],\r\n        \"field_small_logo_colorful_url\": [\r\n            {\r\n                \"value\": \"http://10.32.106.78:8085/core/themes/bartik/logo.svg\",\r\n                \"lang\": \"en\"\r\n            },\r\n            {\r\n                \"value\": \"http://10.32.106.78:8085/core/themes/bartik/logo.svg\",\r\n                \"lang\": \"el\"\r\n            }\r\n        ],\r\n        \"field_small_logo_negative_url\": [\r\n            {\r\n                \"value\": \"http://10.32.106.78:8085/core/themes/bartik/logo.svg\",\r\n                \"lang\": \"en\"\r\n            },\r\n            {\r\n                \"value\": \"http://10.32.106.78:8085/core/themes/bartik/logo.svg\",\r\n                \"lang\": \"el\"\r\n            }\r\n        ],\r\n        \"field_supporters_keys\": [\r\n            {\r\n                \"value\": \"40000\",\r\n                \"lang\": \"en\"\r\n            },\r\n            {\r\n                \"value\": \"40000\",\r\n                \"lang\": \"el\"\r\n            }\r\n        ],\r\n        \"field_synoptic_text\": [\r\n            {\r\n                \"value\": \"Animasyros 9.0\",\r\n                \"format\": \"basic_html\",\r\n                \"lang\": \"en\"\r\n            },\r\n            {\r\n                \"value\": \"Animasyros 9.0\",\r\n                \"format\": \"basic_html\",\r\n                \"lang\": \"el\"\r\n            }\r\n        ],\r\n        \"field_videos\": [\r\n            {\r\n                \"value\": \"https://www.youtube.com/embed/ArTryCLsttk\",\r\n                \"lang\": \"en\"\r\n            },\r\n            {\r\n                \"value\": \"https://www.youtube.com/embed/ArTryCLsttk\",\r\n                \"lang\": \"el\"\r\n            }\r\n        ]\r\n    },\r\n    \"type\": [\r\n        {\r\n            \"target_id\": \"action_additional_data\"\r\n        }\r\n    ],\r\n    \"_links\": {\r\n        \"type\": {\r\n            \"href\": \"string\"\r\n        }\r\n    },\r\n    \"title\": [\r\n        {\r\n            \"value\": \"Example New Action Additional Data 3\",\r\n            \"lang\": \"en\"\r\n        },\r\n        {\r\n            \"value\": \"Δοκιμή Example New Action Additional Data 3\",\r\n            \"lang\": \"el\"\r\n        }\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "{{root_url}}/cmscontent/content",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"cmscontent",
+										"content"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Get Content",
+					"description": "",
+					"item": [
+						{
+							"name": "Get drupal content (Greek)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "application_id",
+										"value": "{{application_id}}"
+									},
+									{
+										"key": "user_id",
+										"value": "{{user_id}}"
+									},
+									{
+										"key": "username",
+										"value": "{{username1}}"
+									},
+									{
+										"key": "provider_id",
+										"value": "{{provider_id}}"
+									},
+									{
+										"key": "provider",
+										"value": "{{provider}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{root_url}}/cmscontent/content/el/80",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"cmscontent",
+										"content",
+										"el",
+										"80"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get drupal content (English)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "application_id",
+										"value": "{{application_id}}"
+									},
+									{
+										"key": "user_id",
+										"value": "{{user_id}}"
+									},
+									{
+										"key": "username",
+										"value": "{{username1}}"
+									},
+									{
+										"key": "provider_id",
+										"value": "{{provider_id}}"
+									},
+									{
+										"key": "provider",
+										"value": "{{provider}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{root_url}}/cmscontent/content/en/167",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"cmscontent",
+										"content",
+										"en",
+										"167"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Get All Tags",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "sandbox_id",
+								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "username",
+								"value": "{{username1}}"
+							},
+							{
+								"key": "provider_id",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"value": "{{provider}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{root_url}}/cmscontent/tags/",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"cmscontent",
+								"tags",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Nodes for a tag",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "sandbox_id",
+								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "username",
+								"value": "{{username1}}"
+							},
+							{
+								"key": "provider_id",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"value": "{{provider}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{root_url}}/cmscontent/tags/en/action",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"cmscontent",
+								"tags",
+								"en",
+								"action"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Files ",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "sandbox_id",
+								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "username",
+								"value": "{{username1}}"
+							},
+							{
+								"key": "provider_id",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"value": "{{provider}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{root_url}}/cmscontent/files/7",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"cmscontent",
+								"files",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "External Data",
+			"description": "",
+			"item": [
+				{
+					"name": "Admin calls",
+					"description": "",
+					"item": [
+						{
+							"name": "Update donation promise",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "application_id",
+										"value": "{{application_id}}"
+									},
+									{
+										"key": "user_id",
+										"value": "{{user_id}}"
+									},
+									{
+										"key": "username",
+										"value": "{{username1}}"
+									},
+									{
+										"key": "provider_id",
+										"value": "{{provider_id}}"
+									},
+									{
+										"key": "provider",
+										"value": "{{provider}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"categoryMoneyFound\": \"\",\r\n  \"actionKey\": \"e53cd246-7ead-404c-bf4d-57c3f22547e2\",\r\n  \"donationTime\": \"2018-02-15T16:10:09.081Z\",\r\n  \"payType\": \"sandbox\",\r\n  \"publish\": false,\r\n  \"theChallenge\": \"123456\",\r\n  \"transactionKey\": \"bba11fe7-e460-4e74-b3da-c05655822609_2017-12-07T14:19:34\",\r\n  \"transactionReceiptKey\": \"bba11fe7-e460-4e74-b3da-c05655822609_2017\",\r\n  \"userKey\": \"sandboxuser1\",\r\n  \"xpAmount\": 10000,\r\n  \"status\": \"Canceled_By_User\"\r\n}"
+								},
+								"url": {
+									"raw": "{{root_url}}/externaldata/donations/{{donationPromiseId}}",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"externaldata",
+										"donations",
+										"{{donationPromiseId}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update action data",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "application_id",
+										"value": "{{application_id}}"
+									},
+									{
+										"key": "user_id",
+										"value": "{{user_id}}"
+									},
+									{
+										"key": "username",
+										"value": "{{username1}}"
+									},
+									{
+										"key": "provider_id",
+										"value": "{{provider_id}}"
+									},
+									{
+										"key": "provider",
+										"value": "{{provider}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"actionName\": \"myactionexample5\",\r\n  \"accountKey\": \"ece26104-ce1b-4c2d-829b-5d01dd921f48\",\r\n  \"cardsAccountKey\": \"e2554977-c1d1-47c0-8c9b-f493a2a88263\",\r\n  \"dateStart\": \"2018-02-15T16:10:09.042Z\",\r\n  \"dateEnd\": \"2018-04-15T16:10:09.042Z\",\r\n  \"offsetAmount\": 0,\r\n  \"targetAmount\": 50000,\r\n  \"status\": \"Archived\"\r\n}"
+								},
+								"url": {
+									"raw": "{{root_url}}/externaldata/actiondata/{{actionDataId}}",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"externaldata",
+										"actiondata",
+										"{{actionDataId}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create action data",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "application_id",
+										"value": "{{application_id}}"
+									},
+									{
+										"key": "user_id",
+										"value": "{{user_id}}"
+									},
+									{
+										"key": "username",
+										"value": "{{username1}}"
+									},
+									{
+										"key": "provider_id",
+										"value": "{{provider_id}}"
+									},
+									{
+										"key": "provider",
+										"value": "{{provider}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"actionName\": \"My Action Example {{$randomInt}}\",\r\n  \"accountKey\": \"ece26104-ce1b-4c2d-829b-5d01dd921f48\",\r\n  \"cardsAccountKey\": \"e2554977-c1d1-47c0-8c9b-f493a2a88263\",\r\n  \"dateStart\": \"2018-02-15T16:10:09.042Z\",\r\n  \"dateEnd\": \"2018-04-15T16:10:09.042Z\",\r\n  \"offsetAmount\": 150,\r\n  \"targetAmount\": 20000\r\n}"
+								},
+								"url": {
+									"raw": "{{root_url}}/externaldata/actiondata",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"externaldata",
+										"actiondata"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Thematic Areas",
+					"description": "",
+					"item": [
+						{
+							"name": "Get all thematic areas",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "application_id",
+										"value": "{{application_id}}"
+									},
+									{
+										"key": "user_id",
+										"value": "{{user_id}}"
+									},
+									{
+										"key": "username",
+										"value": "{{username1}}"
+									},
+									{
+										"key": "provider_id",
+										"value": "{{provider_id}}"
+									},
+									{
+										"key": "provider",
+										"value": "{{provider}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{root_url}}/externaldata/thematicareas",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"externaldata",
+										"thematicareas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get thematic area",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "application_id",
+										"value": "{{application_id}}"
+									},
+									{
+										"key": "user_id",
+										"value": "{{user_id}}"
+									},
+									{
+										"key": "username",
+										"value": "{{username1}}"
+									},
+									{
+										"key": "provider_id",
+										"value": "{{provider_id}}"
+									},
+									{
+										"key": "provider",
+										"value": "{{provider}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{root_url}}/externaldata/thematicareas/{{thematicAreaId}}",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"externaldata",
+										"thematicareas",
+										"{{thematicAreaId}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create thematic area",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "application_id",
+										"value": "{{application_id}}"
+									},
+									{
+										"key": "user_id",
+										"value": "{{user_id}}"
+									},
+									{
+										"key": "username",
+										"value": "{{username1}}"
+									},
+									{
+										"key": "provider_id",
+										"value": "{{provider_id}}"
+									},
+									{
+										"key": "provider",
+										"value": "{{provider}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Thematic area name 15\",\r\n    \"description\": \"Some description...\",\r\n    \"logoUrl\": \"https://www.act4greece.gr/wp-content/uploads/2016/08/research4.png\",\r\n    \"status\": \"Active\",\r\n    \"actions\": [\r\n        \"{{actionDataId}}\"\r\n    ]\r\n}\r\n"
+								},
+								"url": {
+									"raw": "{{root_url}}/externaldata/thematicareas",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"externaldata",
+										"thematicareas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update thematic area",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "sandbox_id",
+										"value": "{{sandbox_id}}"
+									},
+									{
+										"key": "application_id",
+										"value": "{{application_id}}"
+									},
+									{
+										"key": "user_id",
+										"value": "{{user_id}}"
+									},
+									{
+										"key": "username",
+										"value": "{{username1}}"
+									},
+									{
+										"key": "provider_id",
+										"value": "{{provider_id}}"
+									},
+									{
+										"key": "provider",
+										"value": "{{provider}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Thematic area name 5\",\r\n    \"description\": \"Some updated description...\",\r\n    \"logoUrl\": \"https://www.act4greece.gr/wp-content/uploads/2016/08/research4.png\",\r\n    \"status\": \"Archived\",\r\n    \"actions\": [\r\n        \"{{actionDataId}}\"\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "{{root_url}}/externaldata/thematicareas/{{thematicAreaId}}",
+									"host": [
+										"{{root_url}}"
+									],
+									"path": [
+										"externaldata",
+										"thematicareas",
+										"{{thematicAreaId}}"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Get all actions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "sandbox_id",
+								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "username",
+								"value": "{{username1}}"
+							},
+							{
+								"key": "provider_id",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"value": "{{provider}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{root_url}}/externaldata/actiondata",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"externaldata",
+								"actiondata"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get data for an action",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "sandbox_id",
+								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "username",
+								"value": "{{username1}}"
+							},
+							{
+								"key": "provider_id",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"value": "{{provider}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{root_url}}/externaldata/actiondata/{{actionDataId}}",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"externaldata",
+								"actiondata",
+								"{{actionDataId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get donation promises for an action",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "sandbox_id",
+								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "username",
+								"value": "{{username1}}"
+							},
+							{
+								"key": "provider_id",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"value": "{{provider}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{root_url}}/externaldata/actiondata/{{actionDataId}}/donations",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"externaldata",
+								"actiondata",
+								"{{actionDataId}}",
+								"donations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get donation promises for user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "sandbox_id",
+								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "username",
+								"value": "{{username1}}"
+							},
+							{
+								"key": "provider_id",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"value": "{{provider}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{root_url}}/externaldata/donations",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"externaldata",
+								"donations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get donation promise",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "sandbox_id",
+								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "username",
+								"value": "{{username1}}"
+							},
+							{
+								"key": "provider_id",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"value": "{{provider}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{root_url}}/externaldata/actiondata/{{actionDataId}}/donations/{{donationPromiseId}}",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"externaldata",
+								"actiondata",
+								"{{actionDataId}}",
+								"donations",
+								"{{donationPromiseId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post donation promise",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "sandbox_id",
+								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "username",
+								"value": "{{username1}}"
+							},
+							{
+								"key": "provider_id",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"value": "{{provider}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"categoryMoneyFound\": \"\",\r\n  \"payType\": \"sandbox\",\r\n  \"publish\": true,\r\n  \"theChallenge\": \"123456\",\r\n  \"transactionKey\": \"bba11fe7-e460-4e74-b3da-c05655822609_2017-12-07T14:19:34\",\r\n  \"transactionReceiptKey\": \"bba11fe7-e460-4e74-b3da-c05655822609_2017\",\r\n  \"userKey\": \"sandboxUser1\",\r\n  \"xpAmount\": 100\r\n}"
+						},
+						"url": {
+							"raw": "{{root_url}}/externaldata/actiondata/{{actionDataId}}/donations",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"externaldata",
+								"actiondata",
+								"{{actionDataId}}",
+								"donations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register newsletter user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "sandbox_id",
+								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "username",
+								"value": "{{username1}}"
+							},
+							{
+								"key": "provider_id",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"value": "{{provider}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"sandboxUser2\"\r\n}"
+						},
+						"url": {
+							"raw": "{{root_url}}/externaldata/actiondata/{{actionDataId}}/newsletterusers",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"externaldata",
+								"actiondata",
+								"{{actionDataId}}",
+								"newsletterusers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Contact us",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "sandbox_id",
+								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "username",
+								"value": "{{username1}}"
+							},
+							{
+								"key": "provider_id",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"value": "{{provider}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"surname\": \"Φωτεινός\",\n    \"firstname\": \"Φώτης\",\n    \"email\": \"user5@test.gr\",\n    \"message\": \"Δοκιμαστικό μήνυμα απο postman\"\n}"
+						},
+						"url": {
+							"raw": "{{root_url}}/externaldata/contactus",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"externaldata",
+								"contactus"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Back Office",
+			"description": "",
+			"item": [
+				{
+					"name": "Get newsletter users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "sandbox_id",
+								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "username",
+								"value": "{{username1}}"
+							},
+							{
+								"key": "provider_id",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"value": "{{provider}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{root_url}}/backoffice/actiondata/{{actionDataId}}/newsletterusers",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"backoffice",
+								"actiondata",
+								"{{actionDataId}}",
+								"newsletterusers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete newsletter user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "sandbox_id",
+								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "username",
+								"value": "{{username1}}"
+							},
+							{
+								"key": "provider_id",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"value": "{{provider}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{root_url}}/backoffice/actiondata/{{actionDataId}}/newsletterusers/{{user_id}}",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"backoffice",
+								"actiondata",
+								"{{actionDataId}}",
+								"newsletterusers",
+								"{{user_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all contact us entries",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "sandbox_id",
+								"value": "{{sandbox_id}}"
+							},
+							{
+								"key": "application_id",
+								"value": "{{application_id}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "username",
+								"value": "{{username1}}"
+							},
+							{
+								"key": "provider_id",
+								"value": "{{provider_id}}"
+							},
+							{
+								"key": "provider",
+								"value": "{{provider}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{root_url}}/backoffice/contactus",
+							"host": [
+								"{{root_url}}"
+							],
+							"path": [
+								"backoffice",
+								"contactus"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
