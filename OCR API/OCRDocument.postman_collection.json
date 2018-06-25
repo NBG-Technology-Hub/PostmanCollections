@@ -38,7 +38,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"sandboxId\": \"{{sandbox_id}}\"\r\n}"
+							"raw": "{\r\n  \"sandbox_id\": \"{{sandbox_id}}\"\r\n}"
 						},
 						"description": ""
 					},
