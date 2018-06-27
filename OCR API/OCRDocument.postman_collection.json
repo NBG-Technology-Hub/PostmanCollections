@@ -34,6 +34,10 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
+							},
+							{
+								"key": "x-ibm-client-id",
+								"value": "{{x-ibm-client-id}}"
 							}
 						],
 						"body": {
@@ -61,7 +65,12 @@
 					"request": {
 						"url": "{{root_url}}/sandbox/{{sandbox_id}}",
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "x-ibm-client-id",
+								"value": "{{x-ibm-client-id}}"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
@@ -90,7 +99,12 @@
 					"request": {
 						"url": "{{root_url}}/sandbox/{{sandbox_id}}",
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "x-ibm-client-id",
+								"value": "{{x-ibm-client-id}}"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
@@ -122,6 +136,10 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
+							},
+							{
+								"key": "x-ibm-client-id",
+								"value": "{{x-ibm-client-id}}"
 							}
 						],
 						"body": {
@@ -155,6 +173,10 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
+							},
+							{
+								"key": "x-ibm-client-id",
+								"value": "{{x-ibm-client-id}}"
 							}
 						],
 						"body": {
@@ -211,7 +233,12 @@
 								"key": "provider",
 								"value": "{{provider}}",
 								"description": ""
+							},
+							{
+								"key": "x-ibm-client-id",
+								"value": "{{x-ibm-client-id}}"
 							}
+
 						],
 						"body": {
 							"mode": "raw",
@@ -261,6 +288,10 @@
 								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
+							},
+							{
+								"key": "x-ibm-client-id",
+								"value": "{{x-ibm-client-id}}"
 							}
 						],
 						"body": {
