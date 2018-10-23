@@ -26,8 +26,8 @@
 						"method": "DELETE",
 						"header": [
 							{
-								"key": "xibmclientid",
-								"value": "{{xibmclientid}}"
+								"key": "x-ibm-client-id",
+								"value": "{{x-ibm-client-id}}"
 							}
 						],
 						"body": {
@@ -70,12 +70,12 @@
 						"method": "POST",
 						"header": [
 							{
-								"key": "ContentType",
+								"key": "Content-Type",
 								"value": "application/json"
 							},
 							{
-								"key": "xibmclientid",
-								"value": "{{xibmclientid}}"
+								"key": "x-ibm-client-id",
+								"value": "{{x-ibm-client-id}}"
 							}
 						],
 						"body": {
@@ -114,12 +114,12 @@
 						"method": "PUT",
 						"header": [
 							{
-								"key": "ContentType",
+								"key": "Content-Type",
 								"value": "application/json"
 							},
 							{
-								"key": "xibmclientid",
-								"value": "{{xibmclientid}}"
+								"key": "x-ibm-client-id",
+								"value": "{{x-ibm-client-id}}"
 							}
 						],
 						"body": {
@@ -160,8 +160,8 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "xibmclientid",
-								"value": "{{xibmclientid}}"
+								"key": "x-ibm-client-id",
+								"value": "{{x-ibm-client-id}}"
 							}
 						],
 						"body": {
@@ -225,12 +225,12 @@
 								"value": "{{provider}}"
 							},
 							{
-								"key": "ContentType",
+								"key": "Content-Type",
 								"value": "application/json"
 							},
 							{
-								"key": "xibmclientid",
-								"value": "{{xibmclientid}}"
+								"key": "x-ibm-client-id",
+								"value": "{{x-ibm-client-id}}"
 							}
 						],
 						"body": {
@@ -271,12 +271,12 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "ContentType",
+								"key": "Content-Type",
 								"value": "application/json"
 							},
 							{
-								"key": "xibmclientid",
-								"value": "{{xibmclientid}}"
+								"key": "x-ibm-client-id",
+								"value": "{{x-ibm-client-id}}"
 							}
 						],
 						"body": {
@@ -321,12 +321,12 @@
 						"method": "POST",
 						"header": [
 							{
-								"key": "ContentType",
+								"key": "Content-Type",
 								"value": "application/json"
 							},
 							{
-								"key": "xibmclientid",
-								"value": "{{xibmclientid}}"
+								"key": "x-ibm-client-id",
+								"value": "{{x-ibm-client-id}}"
 							}
 						],
 						"body": {
@@ -369,12 +369,12 @@
 						"method": "PUT",
 						"header": [
 							{
-								"key": "ContentType",
+								"key": "Content-Type",
 								"value": "application/json"
 							},
 							{
-								"key": "xibmclientid",
-								"value": "{{xibmclientid}}"
+								"key": "x-ibm-client-id",
+								"value": "{{x-ibm-client-id}}"
 							}
 						],
 						"body": {
@@ -418,12 +418,12 @@
 						"method": "PUT",
 						"header": [
 							{
-								"key": "ContentType",
+								"key": "Content-Type",
 								"value": "application/json"
 							},
 							{
-								"key": "xibmclientid",
-								"value": "{{xibmclientid}}"
+								"key": "x-ibm-client-id",
+								"value": "{{x-ibm-client-id}}"
 							}
 						],
 						"body": {
@@ -450,12 +450,12 @@
 						"method": "DELETE",
 						"header": [
 							{
-								"key": "ContentType",
+								"key": "Content-Type",
 								"value": "application/json"
 							},
 							{
-								"key": "xibmclientid",
-								"value": "{{xibmclientid}}"
+								"key": "x-ibm-client-id",
+								"value": "{{x-ibm-client-id}}"
 							}
 						],
 						"body": {
@@ -536,12 +536,12 @@
 										"value": "{{provider}}"
 									},
 									{
-										"key": "ContentType",
+										"key": "Content-Type",
 										"value": "application/json"
 									},
 									{
-										"key": "xibmclientid",
-										"value": "{{xibmclientid}}"
+										"key": "x-ibm-client-id",
+										"value": "{{x-ibm-client-id}}"
 									}
 								],
 								"body": {
@@ -605,12 +605,12 @@
 										"value": "{{provider}}"
 									},
 									{
-										"key": "ContentType",
+										"key": "Content-Type",
 										"value": "application/json"
 									},
 									{
-										"key": "xibmclientid",
-										"value": "{{xibmclientid}}"
+										"key": "x-ibm-client-id",
+										"value": "{{x-ibm-client-id}}"
 									}
 								],
 								"body": {
@@ -674,12 +674,12 @@
 										"value": "{{provider}}"
 									},
 									{
-										"key": "ContentType",
+										"key": "Content-Type",
 										"value": "application/json"
 									},
 									{
-										"key": "xibmclientid",
-										"value": "{{xibmclientid}}"
+										"key": "x-ibm-client-id",
+										"value": "{{x-ibm-client-id}}"
 									}
 								],
 								"body": {
@@ -754,12 +754,12 @@
 										"value": "{{provider}}"
 									},
 									{
-										"key": "ContentType",
+										"key": "Content-Type",
 										"value": "application/json"
 									},
 									{
-										"key": "xibmclientid",
-										"value": "{{xibmclientid}}"
+										"key": "x-ibm-client-id",
+										"value": "{{x-ibm-client-id}}"
 									}
 								],
 								"body": {
@@ -823,12 +823,12 @@
 										"value": "{{provider}}"
 									},
 									{
-										"key": "ContentType",
+										"key": "Content-Type",
 										"value": "application/json"
 									},
 									{
-										"key": "xibmclientid",
-										"value": "{{xibmclientid}}"
+										"key": "x-ibm-client-id",
+										"value": "{{x-ibm-client-id}}"
 									}
 								],
 								"body": {
@@ -892,12 +892,12 @@
 										"value": "{{provider}}"
 									},
 									{
-										"key": "ContentType",
+										"key": "Content-Type",
 										"value": "application/json"
 									},
 									{
-										"key": "xibmclientid",
-										"value": "{{xibmclientid}}"
+										"key": "x-ibm-client-id",
+										"value": "{{x-ibm-client-id}}"
 									}
 								],
 								"body": {
@@ -974,12 +974,12 @@
 										"value": "{{provider}}"
 									},
 									{
-										"key": "ContentType",
+										"key": "Content-Type",
 										"value": "application/json"
 									},
 									{
-										"key": "xibmclientid",
-										"value": "{{xibmclientid}}"
+										"key": "x-ibm-client-id",
+										"value": "{{x-ibm-client-id}}"
 									}
 								],
 								"body": {
@@ -1048,12 +1048,12 @@
 										"value": "{{provider}}"
 									},
 									{
-										"key": "ContentType",
+										"key": "Content-Type",
 										"value": "application/json"
 									},
 									{
-										"key": "xibmclientid",
-										"value": "{{xibmclientid}}"
+										"key": "x-ibm-client-id",
+										"value": "{{x-ibm-client-id}}"
 									}
 								],
 								"body": {
@@ -1117,12 +1117,12 @@
 										"value": "{{provider}}"
 									},
 									{
-										"key": "ContentType",
+										"key": "Content-Type",
 										"value": "application/json"
 									},
 									{
-										"key": "xibmclientid",
-										"value": "{{xibmclientid}}"
+										"key": "x-ibm-client-id",
+										"value": "{{x-ibm-client-id}}"
 									}
 								],
 								"body": {
@@ -1192,12 +1192,12 @@
 										"value": "{{provider}}"
 									},
 									{
-										"key": "ContentType",
+										"key": "Content-Type",
 										"value": "application/json"
 									},
 									{
-										"key": "xibmclientid",
-										"value": "{{xibmclientid}}"
+										"key": "x-ibm-client-id",
+										"value": "{{x-ibm-client-id}}"
 									}
 								],
 								"body": {
@@ -1265,12 +1265,12 @@
 										"value": "{{provider}}"
 									},
 									{
-										"key": "ContentType",
+										"key": "Content-Type",
 										"value": "application/json"
 									},
 									{
-										"key": "xibmclientid",
-										"value": "{{xibmclientid}}"
+										"key": "x-ibm-client-id",
+										"value": "{{x-ibm-client-id}}"
 									}
 								],
 								"body": {
@@ -1339,12 +1339,12 @@
 										"value": "{{provider}}"
 									},
 									{
-										"key": "ContentType",
+										"key": "Content-Type",
 										"value": "application/json"
 									},
 									{
-										"key": "xibmclientid",
-										"value": "{{xibmclientid}}"
+										"key": "x-ibm-client-id",
+										"value": "{{x-ibm-client-id}}"
 									}
 								],
 								"body": {
@@ -1413,12 +1413,12 @@
 										"value": "{{provider}}"
 									},
 									{
-										"key": "ContentType",
+										"key": "Content-Type",
 										"value": "application/json"
 									},
 									{
-										"key": "xibmclientid",
-										"value": "{{xibmclientid}}"
+										"key": "x-ibm-client-id",
+										"value": "{{x-ibm-client-id}}"
 									}
 								],
 								"body": {
@@ -1482,12 +1482,12 @@
 										"value": "{{provider}}"
 									},
 									{
-										"key": "ContentType",
+										"key": "Content-Type",
 										"value": "application/json"
 									},
 									{
-										"key": "xibmclientid",
-										"value": "{{xibmclientid}}"
+										"key": "x-ibm-client-id",
+										"value": "{{x-ibm-client-id}}"
 									}
 								],
 								"body": {
@@ -1562,12 +1562,12 @@
 										"value": "{{provider}}"
 									},
 									{
-										"key": "ContentType",
+										"key": "Content-Type",
 										"value": "application/json"
 									},
 									{
-										"key": "xibmclientid",
-										"value": "{{xibmclientid}}"
+										"key": "x-ibm-client-id",
+										"value": "{{x-ibm-client-id}}"
 									}
 								],
 								"body": {
@@ -1631,12 +1631,12 @@
 										"value": "{{provider}}"
 									},
 									{
-										"key": "ContentType",
+										"key": "Content-Type",
 										"value": "application/json"
 									},
 									{
-										"key": "xibmclientid",
-										"value": "{{xibmclientid}}"
+										"key": "x-ibm-client-id",
+										"value": "{{x-ibm-client-id}}"
 									}
 								],
 								"body": {
@@ -1700,12 +1700,12 @@
 										"value": "{{provider}}"
 									},
 									{
-										"key": "ContentType",
+										"key": "Content-Type",
 										"value": "application/json"
 									},
 									{
-										"key": "xibmclientid",
-										"value": "{{xibmclientid}}"
+										"key": "x-ibm-client-id",
+										"value": "{{x-ibm-client-id}}"
 									}
 								],
 								"body": {
@@ -1772,12 +1772,12 @@
 								"value": "{{provider}}"
 							},
 							{
-								"key": "ContentType",
+								"key": "Content-Type",
 								"value": "application/json"
 							},
 							{
-								"key": "xibmclientid",
-								"value": "{{xibmclientid}}"
+								"key": "x-ibm-client-id",
+								"value": "{{x-ibm-client-id}}"
 							}
 						],
 						"body": {
@@ -1852,12 +1852,12 @@
 								"value": "{{provider}}"
 							},
 							{
-								"key": "ContentType",
+								"key": "Content-Type",
 								"value": "application/json"
 							},
 							{
-								"key": "xibmclientid",
-								"value": "{{xibmclientid}}"
+								"key": "x-ibm-client-id",
+								"value": "{{x-ibm-client-id}}"
 							}
 						],
 						"body": {
@@ -1921,12 +1921,12 @@
 								"value": "{{provider}}"
 							},
 							{
-								"key": "ContentType",
+								"key": "Content-Type",
 								"value": "application/json"
 							},
 							{
-								"key": "xibmclientid",
-								"value": "{{xibmclientid}}"
+								"key": "x-ibm-client-id",
+								"value": "{{x-ibm-client-id}}"
 							}
 						],
 						"body": {
